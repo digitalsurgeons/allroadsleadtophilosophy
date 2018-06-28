@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  font-family: menlo;
+  justify-content: center;
+}
+
+/* Canvas */
+.canvas {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  max-width: 775px;
+  margin: 0 auto;
+}
+
+.canvas__heading {
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+.canvas__body {
+  font-size: 20px;
+  margin: 20px 0;
+  line-height: 1.5;
+}
