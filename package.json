@@ -1,0 +1,11 @@
+{
+  "name": "allroads",
+  "version": "0.0.0",
+  "description": "Because all roads lead to philosophy...",
+  "main": "index.html",
+  "author": "Dylan Baker, Jake Burden, Adam Chambers",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "~1.0.0-rc.2"
+  }
+}
