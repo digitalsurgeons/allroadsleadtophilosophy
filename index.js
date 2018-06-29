@@ -1,9 +1,13 @@
 const ui = {
   canvas: document.querySelector('[data-canvas]'),
-  initBtns: document.querySelector('[data-init]')
+  input: document.querySelector('[data-input]'),
+  initBtns: document.querySelectorAll('[data-init]')
 }
 
-ui.initBtns.addEventListener('click', e => init(e, ui))
+ui.initBtns.forEach(btn => {
+  btn.addEventListener('click', e => init(e, ui))
+})
+
 
 function init(e, ui) {
   const target = e.target
@@ -14,12 +18,12 @@ function init(e, ui) {
   ui.canvas.innerHTML = loading
 
   if (type === 'url') {
-    
+    fire()
   } else if (type === 'lucky') {
     fire()
   }
 }
 
 function fire() {
-  alert('Fire!!')
+  console.log('Do shit...')
 }
