@@ -4,7 +4,8 @@ const { Client } = require('pg')
 module.exports = {
   getLeaderBoard: getLeaderBoard,
   getStepsBySession: getStepsBySession,
-  insertStep: insertStep
+  insertSession: insertSession,
+  insertStep: insertStep,
 }
 
 function getClient() {
@@ -49,15 +50,30 @@ async function getStepsBySession(sessionId) {
   return res.rows
 }
 
-async function insertStep(sessionId, sequenceKey, url) {
+async function insertSession(id, origin) {
   const client = getClient()
   let res = await client.query(
     `
-      INSERT INTO STEPS (sessionId, sequenceKey, url)
-      VALUES ($1, $2, $3)
+      INSERT INTO sessions (id, origin)
+      VALUES ($1, $2)
     `,
-    [sessionId, sequenceKey, url]
+    [id, origin]
   )
   await client.end()
   return res.rows
 }
+
+async function insertStep(sessionId, sequenceKey, url, path) {
+  const client = getClient()
+  let res = await client.query(
+    `
+      INSERT INTO steps (sessionId, sequenceKey, url, screenshotPath)
+      VALUES ($1, $2, $3, $4)
+    `,
+    [sessionId, sequenceKey, url, path]
+  )
+  await client.end()
+  return res.rows
+}
+
+insertStep(1, 1, "test.com", "image.png")
