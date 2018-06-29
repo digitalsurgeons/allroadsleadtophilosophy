@@ -1,0 +1,3 @@
+CREATE TABLE IF NOT EXISTS steps (id SERIAL PRIMARY KEY, sessionId INT, sequenceKey INT, url TEXT);
+
+CREATE TABLE IF NOT EXISTS sessions (id SERIAL PRIMARY KEY, origin TEXT);
