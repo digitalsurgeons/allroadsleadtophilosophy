@@ -35,6 +35,17 @@ body {
   line-height: 1.5;
 }
 
+.canvas__input {
+  border: solid 1px #ccc;
+  background: #fff;
+  color: #ccc;
+  padding: 10px 15px;
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 10px 0;
+  width: 100%;
+}
+
 /* Button List */
 .button-list {
   display: flex;
