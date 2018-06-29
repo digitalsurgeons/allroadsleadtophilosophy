@@ -34,3 +34,36 @@ body {
   margin: 20px 0;
   line-height: 1.5;
 }
+
+/* Button List */
+.button-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
+}
+
+.button-list__item {
+  display: block;
+  margin: 0 20px;
+}
+
+/* Button */
+.button,
+.button:active,
+.button:hover,
+.button:visited {
+  background: #000;
+  border: solid 2px #000;
+  color: #fff;
+  display: block;
+  min-width: 225px;
+  padding: 15px 30px;
+  transition: .3s;
+  text-decoration: none;
+  width: 100%;
+}
+
+.button:hover {
+  background: #fff;
+  color: #000;
+}
