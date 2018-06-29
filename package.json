@@ -5,10 +5,14 @@
   "main": "index.html",
   "author": "Dylan Baker, Jake Burden, Adam Chambers",
   "license": "ISC",
+  "scripts": {
+    "test": "tape tests/db.js"
+  },
   "dependencies": {
     "cheerio": "~1.0.0-rc.2",
     "dotenv": "~6.0.0",
     "pg": "~7.4.3",
+    "tape": "~4.9.1",
     "webshot": "~0.18.0"
   }
 }
